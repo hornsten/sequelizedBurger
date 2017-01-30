@@ -16,8 +16,25 @@ router.get("/", function(req, res) {
 });
 
 router.post("/", function(req, res) {
-    Burger
-})
+    Burger.create({
+        burger_name: req.body.burger_name
+    }).then(function() {
+        res.redirect("/");
+    });
+});
+
+router.put("/:id", function(req, res) {
+    Burger.update({
+        devoured: true
+    }, {
+        where: {
+            id: req.params.id
+        }
+    }).then(function() {
+        res.redirect("/");
+    });
+});
+
 
 // //User can enter a new burger into the system. Default value of devoured=false, so user doesn't actually enter that
 // router.post("/", function(req, res) {
