@@ -2,7 +2,8 @@
 var express = require('express');
 var router = express.Router();
 var methodOverride = require('method-override');
-var Burger = require('../models/burger.js');
+var models = require('../models');
+var Burger = models.Burger;
 var Sequelize = require('sequelize');
 var bodyParser = require('body-parser');
 // var connection = require('../config/connection.js');
@@ -13,6 +14,10 @@ router.get("/", function(req, res) {
         res.render("index", { burgers: data });
     })
 });
+
+router.post("/", function(req, res) {
+    Burger
+})
 
 // //User can enter a new burger into the system. Default value of devoured=false, so user doesn't actually enter that
 // router.post("/", function(req, res) {
