@@ -1,0 +1,32 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "A node/express.js/mysql burger-builder",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hornsten/burger.git"
+  },
+  "keywords": [
+    "node",
+    "express.js",
+    "burger",
+    "mysql"
+  ],
+  "author": "Jessica Hornsten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hornsten/burger/issues"
+  },
+  "homepage": "https://github.com/hornsten/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mysql": "^2.12.0"
+  }
+}
