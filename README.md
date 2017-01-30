@@ -1,5 +1,5 @@
-# :hamburger: Fancy Burger
-A Burger Builder incorporating Node/Express.js/MySQL/Handlebars/ORMs
+# :hamburger: Sequelized Burger
+A Sequelize version of my Fancy Burger app, incorporating Node/Express.js/MySQL/Handlebars/ORMs
 
 
 ## Home Page
