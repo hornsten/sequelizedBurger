@@ -5,3 +5,7 @@ h1 {
 ul {
   list-style-type: none;
 }
+
+#customer-name {
+  width: 20vw;
+}
