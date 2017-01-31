@@ -9,3 +9,9 @@ ul {
 #customer-name {
   width: 20vw;
 }
+
+@media only screen and (max-width: 600px) {
+  #customer-name {
+    width: 50vw;
+  }
+}

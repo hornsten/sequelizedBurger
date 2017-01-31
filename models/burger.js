@@ -10,7 +10,5 @@ module.exports = function(sequelize, DataTypes) {
         devoured: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false }
     });
     return Burger;
-    Burger.belongsTo(Customer);
     Burger.sync();
-    Customer.sync();
 }

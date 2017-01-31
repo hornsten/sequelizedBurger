@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col s12 m6">
+    <div class="col s12 m6 burger-col">
       <ul class="collection with-header">
         <li class="collection-header center-align">
           <h5>Ready To Eat</h5></li>
@@ -23,9 +23,10 @@
           <span class="title">
             {{this.id}}. {{this.burger_name}}</span> {{!-- Here's a hidden form and button that will be added to each burger. It kicks off an UPDATE where devoured is changed from false to true. Since this column only displays burgers for which devoured==false, the selected burger will be moved upon submit--}}
           <br>
-          <input type="text" id="customer-name" name="customer_name" placeholder="Customer Name" data-error="wrong" data-success="right" value="" required></input>
+          <input type="text" id="customer-name" name="customer_name" placeholder="Customer Name" data-error="wrong" data-success="right" required></input>
           <form action="/{{this.id}}?_method=PUT" method="POST">
             <input type="hidden" name="id" value="{{this.devoured}}">
+            <input type="hidden" name="customer_name" value="{{this.customer_name}}">
             <br>
             <button class="waves-effect waves-light btn-floating btn-large secondary-content yellow darken-1" type="submit">EAT</button>
           </form>
@@ -33,7 +34,7 @@
         {{/unless}} {{/each}}
       </ul>
     </div>
-    <div class="col s12 m6">
+    <div class="col s12 m6 burger-col">
       <ul class="collection with-header">
         <li class="collection-header center-align">
           <h5>Devoured Burgers</h5></li>
@@ -42,7 +43,8 @@
           <img src="/assets/img/wrapper.png" alt="" class="circle">
           <span class="title grey-text text-darken-1">
            
-              {{this.id}}. {{this.burger_name}}
+              {{this.id}}. {{this.burger_name}}, eaten by<br>
+                {{this.customer_name}}
           
           </span> {{/if}} {{/each}}
       </ul>
