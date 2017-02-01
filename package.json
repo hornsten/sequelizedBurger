@@ -5,7 +5,7 @@
         "node": "6.5.0",
         "npm": "3.10.3"
     }
-}
+},
 "description": "A Sequelize version of fancy burger app",
 "main": "server.js",
 "dependencies": {
