@@ -3,7 +3,8 @@ var db = require("./models");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var app = express();
-var PORT = process.env.NODE_ENV || 3000;
+var PORT = process.env.JAWSDB_URL || 3000;
+
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + "/public"));
