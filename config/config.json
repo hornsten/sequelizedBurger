@@ -14,9 +14,9 @@
         "dialect": "mysql"
     },
     "production": {
-        "username": "tkztw6zdpkuwv2lq",
-        "password": "sepdwid1slxcpkbz",
-        "database": "dongs8hlkbl8mq4w",
+        "username": "cqi1ve9enm8n7rej",
+        "password": "h1150yjngiiwp2hu",
+        "database": "ekyyoxi4wa4tuexo",
         "host": "ryvdxs57afyjk41z.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
         "dialect": "mysql"
     }
