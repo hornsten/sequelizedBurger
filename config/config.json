@@ -1,10 +1,10 @@
 {
     "development": {
-        "username": "root",
-        "password": "pass",
-        "database": "burgers_database",
-        "host": "localhost",
-        "dialect": "mysql"
+        // "username": "root",
+        // "password": "pass",
+        // "database": "burgers_database",
+        // "host": "localhost",
+        // "dialect": "mysql"
     },
     "test": {
         "username": "root",
