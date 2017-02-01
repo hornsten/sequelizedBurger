@@ -19,14 +19,6 @@ router.post("/", function(req, res) {
     });
 });
 
-router.post('/', function(req, res) {
-    db.Customer.create({
-        customer_name: req.body.customer_name
-    }).then(function() {
-        res.redirect('/');
-    });
-});
-
 //Changes status of burger from devoured=false to devoured=true
 router.put("/:id", function(req, res) {
     db.Burger.update({
