@@ -4,12 +4,13 @@ var db = require('../models');
 
 //Grabs all the customers
 router.get("/", function(req, res) {
-    var query = {};
-    if (req.query.burger_id) {
-        query.BurgerId = req.query.burger_id;
-    }
+    // var query = {};
+    // if (req.query.burger_id) {
+    //     query.BurgerId = req.query.burger_id;
+    // }
     db.Customer.findAll({
-        where: query
+        // where: query,
+        // include: [db.Burger]
     }).then(function(data) {
         console.log(data)
         res.render("index", { customers: data });
@@ -26,16 +27,16 @@ router.post("/", function(req, res) {
 });
 
 
-router.put("/:id", function(req, res) {
-    db.Customer.update({
-        devoured: true
-    }, {
-        where: {
-            id: req.params.id
-        }
-    }).then(function() {
-        res.redirect("/");
-    });
-});
+// router.put("/:id", function(req, res) {
+//     db.Customer.update({
+//         devoured: true
+//     }, {
+//         where: {
+//             id: req.params.id
+//         }
+//     }).then(function() {
+//         res.redirect("/");
+//     });
+// });
 
 module.exports = router;

@@ -10,7 +10,9 @@ module.exports = function(sequelize, DataTypes) {
         classMethods: {
             associate: function(models) {
                 Customer.belongsTo(models.Burger, {
-                    foreignKey: { allowNull: false }
+                    foreignKey: {
+                        allowNull: false
+                    }
                 });
             }
         }
