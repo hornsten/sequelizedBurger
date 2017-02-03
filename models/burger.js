@@ -16,6 +16,15 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             defaultValue: false
         }
+    }, {
+        classMethods: {
+            associate: function(models) {
+                Burger.hasMany(models.Customer, {
+                    onDelete: "cascade"
+                });
+            }
+
+        }
     });
     Burger.sync();
     return Burger;
