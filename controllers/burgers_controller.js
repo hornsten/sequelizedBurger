@@ -5,11 +5,7 @@ var db = require('../models');
 //Grabs all the data from the burgers table...all of the burgers! These are sorted later with Handlebars #if and #unless statements
 router.get("/", function(req, res) {
 
-    db.Burger.findAll({
-
-        // include: [db.Customer]
-
-    }).then(function(data) {
+    db.Burger.findAll({}).then(function(data) {
         res.render("index", { burgers: data });
     })
 });
